@@ -2,6 +2,7 @@ body {
   background-color: #333;
   color: #fff;
   font-family: sans-serif;
+  overflow-y: scroll;
 }
 
 header {
@@ -16,41 +17,7 @@ h1 {
   text-align: center;
 }
 
-nav {
-  background-color: #222;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-li {
-  font-size: 18px;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 section {
-  background-color: #222;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 30%;
   padding: 20px;
   margin: 20px;
 }
@@ -58,11 +25,53 @@ section {
 h2 {
   color: #fff;
   font-size: 20px;
-  text-align: center
+  text-align: center;
 }
-  section {
-    /* Other styles for the section element */
-  }
+
+h3 {
+  color: #fff;
+  font-size: 18px;
+}
+
+p {
+  color: #fff;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.neumorphic {
+  border-radius: 50px;
+  background: #222222;
+  box-shadow: inset 5px 5px 10px #0e0e0e,
+              inset -5px -5px 10px #363636;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 50px;
+  background: #222222;
+  box-shadow: inset 5px 5px 10px #0e0e0e,
+              inset -5px -5px 10px #363636;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
 
 footer {
   background-color: #222;
@@ -70,10 +79,5 @@ footer {
   border-radius: 8px;
   text-align: center;
   padding: 20px;
-  margin: 20px;
-}
-
-p {
-  color: #fff;
-  font-size: 16px;
+  margin: 20px
 }
