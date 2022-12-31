@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #222;
+  background-color: #62a0ea;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -64,7 +64,7 @@ a {
 .button {
   display: inline-block;
   border-radius: 50px;
-  background: #222222;
+  background: #62a0ea;
   box-shadow: inset 5px 5px 10px #0e0e0e,
               inset -5px -5px 10px #363636;
   padding: 10px 20px;
@@ -74,7 +74,7 @@ a {
 }
 
 footer {
-  background-color: #222;
+  background-color: #62a0ea;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
