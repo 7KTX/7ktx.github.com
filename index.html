@@ -49,88 +49,135 @@
       <p>Job Description</p>
     </section>
     
-    <!-- Skills section -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Skill 1</li>
-        <li>Skill 2</li>
-        <li>Skill 3</li>
-      </ul>
-    </section>
-    
-    <!-- Contact section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach me at [Your Email] or follow me on social media:</p>
-      <ul>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Facebook</a></li>
-      </ul>
-    </section>
-  </main>
+<!-- Skills section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Skill 1</li>
+    <li>Skill 2</li>
+    <li>Skill 3</li>
+  </ul>
+</section>
+
+<!-- Contact section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>You can reach me at [Your Email] or follow me on social media:</p>
+  <ul>
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#">Facebook</a></li>
+  </ul>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>Copyright [Your Name] [Year]</p>
+</footer>
+
+<!-- Styles -->
+<style>
+  /* Add your own styles here */
+  body {
+    background-color: #000000;
+  }
   
-   <!-- Footer -->
-   <footer>
-    <p>Copyright [Your Name] [Year]</p>
-  </footer>
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
   
-  <!-- Styles -->
-  <style>
-    /* Add your own styles here */
-    body {
-      background-color: #000000;
-    }
-    
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 10px 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    transition: background-color 0.5s;
+  }
+  
+  nav a:hover {
+    background-color: #eeeeee;
+  }
+  
+  /* Add your own fancy animations here */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.5s;
+  }
+  
+  .button:hover {
+    background-color: #eeeeee;
+    color: #000000;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    /* Make the navbar collapse on small screens */
     nav {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 200px;
-      background-color: #ffffff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: static;
+      width: 100%;
     }
     
+    /* Make the navbar items appear as a dropdown menu on small screens */
     nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      display: none;
     }
     
     nav li {
-      margin: 10px 0;
+      display: block;
+      margin: 0;
     }
     
     nav a {
       display: block;
-      padding: 10px 20px;
-      color: #000000;
-      text-decoration: none;
-      transition: background-color 0.5s;
+      padding: 10px;
     }
     
-    nav a:hover {
-      background-color: #eeeeee;
+    /* Add a hamburger menu button to toggle the dropdown menu on small screens */
+    nav::before {
+      content: "≡";
+      font-size: 24px;
+      line-height: 24px;
+      cursor: pointer;
+      display: block;
+      text-align: right;
+      padding: 10px;
     }
     
-    /* Add your own fancy animations here */
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #000000;
-      color: #ffffff;
-      text-decoration: none;
-      transition: background-color 0.5s;
+    /* Make the main content full-width on small screens */
+    main {
+      margin-left: 0;
     }
-    
-    .button:hover {
-      background-color: #eeeeee;
-      color: #000000;
-    }
-  </style>
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  /* Toggle the dropdown menu on small screens when the hamburger menu button is clicked */
+  document.querySelector("nav::before").addEventListener("click", function() {
+    document.querySelector("nav ul").classList.toggle("visible");
+  });
+</script>
 </body>
 </html>
-
