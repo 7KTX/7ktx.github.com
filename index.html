@@ -4,11 +4,6 @@
   <title>Resume</title>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>My Resume</h1>
-  </header>
-  
   <!-- Navigation -->
   <nav>
     <ul>
@@ -22,6 +17,11 @@
   
   <!-- Main content -->
   <main>
+    <!-- Header -->
+    <header>
+      <h1>My Resume</h1>
+    </header>
+    
     <!-- About section -->
     <section id="about">
       <h2>About</h2>
@@ -47,43 +47,90 @@
       <h3>Job Title</h3>
       <p>[Company], [Location]</p>
       <p>Job Description</p>
-      </section>
+    </section>
     
-      <!-- Skills section -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-          <li>Skill 3</li>
-        </ul>
-      </section>
-      
-      <!-- Contact section -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at [Your Email] or follow me on social media:</p>
-        <ul>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Facebook</a></li>
-        </ul>
-      </section>
-    </main>
+    <!-- Skills section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Skill 1</li>
+        <li>Skill 2</li>
+        <li>Skill 3</li>
+      </ul>
+    </section>
     
-    <!-- Footer -->
-    <footer>
-      <p>Copyright [Your Name] [Year]</p>
-    </footer>
-    
-    <!-- Styles -->
-    <style>
-      /* Add your own styles here */
-      body {
-        background-color: #000000;
-      }
-    </style>
-  </body>
-  </html>
+    <!-- Contact section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>You can reach me at [Your Email] or follow me on social media:</p>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </section>
+  </main>
   
+   <!-- Footer -->
+   <footer>
+    <p>Copyright [Your Name] [Year]</p>
+  </footer>
+  
+  <!-- Styles -->
+  <style>
+    /* Add your own styles here */
+    body {
+      background-color: #000000;
+    }
+    
+    nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav li {
+      margin: 10px 0;
+    }
+    
+    nav a {
+      display: block;
+      padding: 10px 20px;
+      color: #000000;
+      text-decoration: none;
+      transition: background-color 0.5s;
+    }
+    
+    nav a:hover {
+      background-color: #eeeeee;
+    }
+    
+    /* Add your own fancy animations here */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000000;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background-color 0.5s;
+    }
+    
+    .button:hover {
+      background-color: #eeeeee;
+      color: #000000;
+    }
+  </style>
+</body>
+</html>
+
