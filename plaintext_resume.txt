@@ -1,0 +1,97 @@
+^Sami Ansari
+Email: OA99@Outlook.com 
+Phone: +1 (647) 289-6889 
+Location: Toronto, ON^
+
+$SUMMARY$
+Highly motivated and results-driven professional with over 3 years of experience in providing exceptional customer service, streamlining office operations, and implementing process improvements. Strong organizational and time management skills, with a proven ability to meet and exceed expectations for productivity and accuracy. Proficient in Microsoft Office, including proficiency in Google AppScript for automating and streamlining workflow. Strong understanding of computer hardware and troubleshooting. Excellent communication and interpersonal skills, with a passion for helping others and making a measurable impact in the workplace.
+
+$WORK EXPERIENCE$
+*P&A Medical November 2022 - Present
+*Medical Ofice Assistant
+*Toronto, ON
+
+- Provided valuable insights and suggestions to improve the overall doctor and patient experience
+- Assisted doctors in streamlining their daily workflow to increase productivity and efficiency
+- Managed and programmed complex spreadsheets to improve office operations and efficiency using Microsoft Office, including proficiency in using Google AppsScript
+- Consistently received positive feedback from patients and colleagues for exceptional customer service, communication skills and attention to detail.
+- Made a measurable impact on the overall functioning and success of the medical practice.
+
+*Academic Tutor
+*November 2021 - Present
+*Manchester, England
+- Specialized in 11+ exam preparation, providing personalized instruction to student 
+- Developed and implemented tailored lesson plans to meet the individual needs of each student 
+- Utilized a variety of teaching methods and materials to enhance student learning and engagement
+- Assessed student progress and provided regular feedback to both students and parent 
+- Utilized technology and digital resources to supplement instruction and increase student engagemen 
+- Worked closely with parents and guardians to set and achieve educational goals for the student 
+- Consistently received positive feedback from parents and students for exceptional teaching and mentoring skill 
+
+*Administrative Assistant
+*Westhill Medical
+*January 2019 - September 2022
+- Contributed patient records to database on a large scale (100+ weekly)
+- Consistently met and exceeded expectations for productivity and accuracy
+- Demonstrated strong organizational skills, managing and maintaining patient records with a high level of accuracy and attention to detail
+- Proactively identified and implemented process improvements to increase efficiency and productivity within the medical office
+- Developed strong communication skills, effectively communicating with patients, colleagues, and medical staff to ensure smooth and efficient workflow
+- Consistently received positive feedback from patients and colleagues for exceptional customer service and communication skills
+ 
+*Rooks to Cooks
+*June 2021 - September 2021
+*Toronto, ON
+-Successfully managed and executed digital marketing campaigns, resulting in a significant increase in website traffic and conversions
+-Analyzed and reported on campaign performance metrics, using data to make informed decisions and optimize future campaigns
+-Assisted in the creation of marketing materials, such as email campaigns and social media posts, that effectively promoted the company and its services
+-Collaborated with cross-functional teams to develop and implement comprehensive marketing strategies, resulting in increased brand awareness and customer engagement
+-Contributed to the growth and engagement of the company's online presence through various digital channels, including social media, email marketing, and content marketing
+-Developed skills in SEO/SEM and Google Analytics, resulting in higher search engine rankings and visibility, which led to increased website traffic and conversions.
+
+*Public Outreach
+*July 2019 - September 2019
+*Ontario, Canada
+-Successfully raised funds for various non-profit organizations through direct sales and relationship building
+-Demonstrated exceptional communication and interpersonal skills while interacting with potential donors, resulting in a high rate of successful fundraising
+-Consistently exceeded fundraising goals, resulting in a significant increase in funding for non-profit organizations
+-Implemented effective sales techniques and strategies to improve donor satisfaction and retention
+-Contributed to the growth and impact of non-profit organizations through successful fundraising efforts
+-Developed skills in relationship building, persuasion and public speaking, resulting in a high rate of repeat donors and successful fundraising campaigns
+
+$SKILLS$
+-Proven ability to type with 100% accuracy and a typing speed of over 130 WPM
+-Strong programming skills in Python and C, with experience in data analysis and automation
+-Skilled in using LaTeX for document preparation, including note-taking and creating professional documents
+-Strong understanding of computer hardware and troubleshooting, able to effectively teach others
+-Proven ability to work effectively in a fast-paced environment with excellent people skills and a passion for helping others
+-Highly proficient in using Microsoft Office and Google AppScript for automating and streamlining workflow
+-Strong organizational and time management skills, consistently meeting and exceeding expectations for productivity and accuracy
+-Hands-on experience in building and upgrading PCs, troubleshooting and diagnosing hardware, software and networking issues
+-Familiarity with various operating systems such as Windows, MacOS and Linux and experience with remote support and remote access tools
+-Proficient in web development, including HTML, CSS, and JavaScript, with experience in creating responsive and interactive web pages.
+
+$PROJECTS$
+
+tDCS Neuro-Helmet
+-Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation
+-Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation
+-Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module
+-Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity
+-Developed skills in electronics design and fabrication, programming, and data analysis.
+
+VPCI Film Festival
+-Organized and executed a successful film festival for VPCI, featuring student submissions from within the school
+-Invited and hosted high-profile Canadian MPs from various Toronto constituencies to attend and participate in the event
+-Coordinated closely with school administration and staff to ensure smooth and successful execution of the festival
+-Developed and maintained relationships with external partners and sponsors to secure funding and support for the event
+-Utilized various marketing strategies, including social media, to increase awareness and attendance
+-Coordinated with the technical team for audiovisual arrangements and ensured seamless execution of the festival
+-Received positive feedback and praise for the successful organization and execution of the event from attendees, including students, staff, and MPs.
+
+$LANGUAGES$
+    English (Fluent)
+    Urdu (Fluent)
+    Hindi (Fluent)
+    Punjabi (Fluent)
+    French (Moderate)
+    Spanish (Basic)

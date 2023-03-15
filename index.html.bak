@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <style>
+    /* Add your own styles here */
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    main {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+      max-width: 800px;
+      padding: 50px 0;
+      background-color: #222222;
+      transform: translateY(-100%);
+      transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    /* Add your own fancy animations here */
+    /* Neumorphic design */
+    .neumorphic {
+      border-radius: 50px;
+      background: #222222;
+      box-shadow: inset 5px 5px 10px #0e0e0e,
+                  inset -5px -5px 10px #363636;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #eeeeee;
+    }
+  </style>
+</head>
+<body>
+  <!-- Opening screen -->
+  <div class="opening-screen">
+    <h1>Hi, my name is Sami!</h1>
+    <h2>Welcome to my Resume</h2>
+    <div class="scroll-down">
+      <div class="arrow">&darr;</div>
+      <div class="text">Scroll down</div>
+  </div>
+  </div>
+
+  <!-- Main content -->
+  <main id="main">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Ruby</li>
+      </ul>
+    </section>
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Bachelor of Science in Computer Science</li>
+        <li>Master of Science in Computer Science</li>
+      </ul>
+    </section>
+    <section class="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>Software Engineer at XYZ Company</li>
+        <li>Full-Stack Developer at ABC Company</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2022 Sami</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Select the main element and the sections
+    const main = document.getElementById('main');
+    const sections = main.children;
+
+    // Add the slide-in class to the sections when they are scrolled into view
+    function slideInSections() {
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0
+        ) {
+          section.classList.add('slide-in');
+        } else {
+          section.classList.remove('slide-in');
+        }
+      }
+    }
+
+    // Add event listeners
+    window.addEventListener('scroll', slideInSections);
+
+    // Initialize the page by sliding in the sections
+    slideInSections();
+  </script>
+</body>
+</html>
