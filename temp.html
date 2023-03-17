@@ -3,177 +3,232 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <title>Sami Ansari's Portfolio</title>
   <style>
-    :root {
-      --text-color: #f5f5f5;
-      --background-color: #222;
-      --accent-color: #4CAF50;
-      --nav-link-color: #f5f5f5;
-      --nav-link-hover-color: #4CAF50;
-    }
-
+    /* Reset browser default styles */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    /* Typography and basic styling */
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
 
+    /* Container for main content */
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    /* Main header with name and title */
     header {
+      background: #35424a;
+      padding: 20px;
+      color: white;
       text-align: center;
-      padding: 2rem;
     }
 
+    header h1 {
+      margin: 10px 0;
+    }
+
+    /* Navigation menu */
     nav {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding-bottom: 2rem;
+      background: #333;
     }
 
     nav a {
+      display: block;
+      padding: 0 20px;
+      color: #f4f4f4;
       text-decoration: none;
-      color: var(--nav-link-color);
-      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: var(--nav-link-hover-color);
+      background: #35424a;
     }
 
-    main {
-      padding: 2rem;
-    }
-
-    h2 {
-      padding-bottom: 1rem;
-    }
-
-    footer {
+    /* Showcase area with background image */
+    .showcase {
+      background: url('showcase.jpg') no-repeat center center/cover;
+      height: 400px;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
+      padding-top: 100px;
     }
 
-    .dark-mode-toggle {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      font-size: 2rem;
-      cursor: pointer;
-      transition: transform 0.3s;
+    .showcase h1 {
+      font-size: 55px;
+      color: white;
+      margin-bottom: 20px;
     }
 
-    .dark-mode-toggle:hover {
-      transform: scale(1.2);
+    .showcase p {
+      font-size: 20px;
+      color: white;
     }
 
-    .particle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .centered {
+    /* Main content area */
+    .main {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .main .left {
+      flex: 0 0 70%;
+    }
+
+    .main .right {
+      flex: 0 0 30%;
+      padding-left: 20px;
+    }
+
+    /* Contact information */
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .contact-info span {
+      display: block;
+    }
+
+    /* Styling for resume sections */
+    .resume-section {
+      margin-bottom: 20px;
+    }
+
+    .resume-section h2 {
+      border-bottom: 1px solid #333;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+
+    .resume-section ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    .resume-section ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer section */
+    footer {
+      background: #333;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <div id="particles-js" class="particle-container"></div>
   <header>
-    <h1 class="centered">Sami Ansari</h1>
+    <h1>Sami Ansari</h1>
+    <p>Software Developer & IT Specialist</p>
   </header>
   <nav>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
   </nav>
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>Highly motivated and results-driven professional with over 3 years of experience in providing exceptional customer service, streamlining office operations, and implementing process improvements. Strong organizational and time management skills, with a proven ability to meet and exceed expectations for productivity and accuracy. Proficient in Microsoft Office, including proficiency in Google AppScript for automating and stream
-        <section id="skills">
-          <h2>Skills</h2>
+  <section class="showcase" id="about">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Discover my skills, experience, and projects</p>
+  </section>
+  <section class="container main">
+    <div class="left">
+      <div class="resume-section" id="experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li>
+            <strong>P&A Medical</strong> | Medical Office Assistant | Toronto, ON | Nov 2022 - Present
+            <ul>
+              <li>Provided valuable insights and suggestions to improve the overall doctor and patient experience</li>
+              <li>Assisted doctors in streamlining their daily workflow to increase productivity and efficiency</li>
+              <li>Managed and programmed complex spreadsheets to improve office operations and efficiency using Microsoft Office, including proficiency in using Google AppsScript</li>
+              <li>Consistently received positive feedback from patients and colleagues for exceptional customer service, communication skills and attention to detail.</li>
+              <li>Made a measurable impact on the overall functioning and success of the medical practice.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Academic Tutor</strong> | Manchester, England | Nov 2021 - Present
+            <ul>
+              <li>Specialized in 11+ exam preparation, providing personalized instruction to students</li>
+              <li>Developed and implemented tailored lesson plans to meet the individual needs of each student</li>
+              <li>Utilized a variety of teaching methods and materials to enhance student learning and engagement</li>
+              <li>Assessed student progress and provided regular feedback to both students and parents</li>
+              <li>Utilized technology and digital resources to supplement instruction and increase student engagement</li>
+              <li>Worked closely with parents and guardians to set and achieve educational goals for the student</li>
+              <li>Consistently received positive feedback from parents and students for exceptional teaching and mentoring skills</li>
+            </ul>
+          </li>
+          <!-- Add more work experience list items here -->
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="contact-info">
+        <h3>Contact Info</h3>
+        <span>Email: OA99@Outlook.com</span>
+        <span>Phone: +1 (647) 289-6889</span>
+        <span>Location: Toronto, ON</span>
+      </div>
+      <div class="resume-section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Proven ability to type with 100% accuracy and a typing speed of over 130 WPM</li>
+          <li>Strong programming skills in Python and C, with experience in data analysis and automation</li>
+          <li>Skilled in using LaTeX for document preparation, including note-taking and creating professional documents</li>
+          <li>Strong understanding of computer hardware and troubleshooting, able to effectively teach others</li>
+          <!-- Add more skills list items here -->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="projects">
+    <div class="resume-section">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>tDCS Neuro-Helmet</strong>
           <ul>
-            <li>Python and C Programming</li>
-            <li>Microsoft Office & Google AppScript</li>
-            <li>Web Development (HTML, CSS, JavaScript)</li>
-            <li>Computer Hardware & Troubleshooting</li>
-            <li>LaTeX for Document Preparation</li>
+            <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
+            <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
+            <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
+            <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
+            <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
           </ul>
-        </section>
-        <section id="projects">
-          <h2>Projects</h2>
+        </li>
+        <li>
+          <strong>VPCI Film Festival</strong>
           <ul>
-            <li>tDCS Neuro-Helmet</li>
-            <li>VPCI Film Festival</li>
+            <li>Organized and executed a successful film festival for VPCI, featuring student submissions from within the school</li>
+            <li>Invited and hosted high-profile Canadian MPs from various Toronto constituencies to attend and participate in the event</li>
+            <li>Coordinated closely with school administration and staff to ensure smooth and successful execution of the festival</li>
+            <li>Developed and maintained relationships with external partners and sponsors to secure funding and support for the event</li>
+            <li>Utilized various marketing strategies, including social media, to increase awareness and attendance</li>
+            <li>Coordinated with the technical team for audiovisual arrangements and ensured seamless execution of the festival</li>
+            <li>Received positive feedback and praise for the successful organization and execution of the event from attendees, including students, staff, and MPs.</li>
           </ul>
-        </section>
-        <section id="contact">
-          <h2>Contact</h2>
-          <p>Email: OA99@Outlook.com</p>
-          <p>Phone: +1 (647) 289-6889</p>
-        </section>
-      </main>
-      <footer>
-        &copy; 2023 Sami Ansari. All rights reserved.
-      </footer>
-      <div class="dark-mode-toggle">🌙</div>
-    </body>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-      particlesJS('particles-js', {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: '#ffffff' },
-          shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 } },
-          opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
-          size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-          line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-          move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
-        },
-        interactivity: {
-          detect_on: 'canvas',
-          events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-          modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-        },
-        retina_detect: true
-      });
-  
-      document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
-  
-      function toggleDarkMode() {
-        const bodyStyles = getComputedStyle(document.body);
-        if (bodyStyles.getPropertyValue('--text-color') === '#f5f5f5') {
-          document.body.style.setProperty('--text-color', '#222');
-          document.body.style.setProperty('--background-color', '#f5f5f5');
-          document.body.style.setProperty('--accent-color', '#4CAF50');
-          document
-          .querySelector('.dark-mode-toggle').textContent = '☀️';
-      } else {
-        document.body.style.setProperty('--text-color', '#f5f5f5');
-        document.body.style.setProperty('--background-color', '#222');
-        document.body.style.setProperty('--accent-color', '#4CAF50');
-        document.querySelector('.dark-mode-toggle').textContent = '🌙';
-      }
-    }
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Sami Ansari. All rights reserved.</p>
+  </footer>
+  <script>
+    // Add your JavaScript code here for any interactivity or animations
   </script>
+</body>
 </html>
-  
+
