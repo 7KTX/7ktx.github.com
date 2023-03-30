@@ -6,14 +6,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --text-color: #f5f5f5;
-      --background-color: #222;
-      --accent-color: #4CAF50;
-      --nav-link-color: #f5f5f5;
-      --nav-link-hover-color: #4CAF50;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+ <style>
+:root {
+  /* Light mode */
+  --text-color-light: #000000;
+  --background-color-light: #ffffff;
+  --accent-color-light: #4CAF50;
+  --nav-link-color-light: #000000;
+  --nav-link-hover-color-light: #4CAF50;
+  --card-background-color-light: #eeeeee;
+  --card-text-color-light: #333333;
+
+  /* Dark mode */
+  --text-color-dark: #f5f5f5;
+  --background-color-dark: #000000;
+  --accent-color-dark: #4CAF50;
+  --nav-link-color-dark: #f5f5f5;
+  --nav-link-hover-color-dark: #4CAF50;
+  --card-background-color-dark: #33333388;
+  --card-text-color-dark: #ffffff;
+}
+
 
     * {
       box-sizing: border-box;
@@ -29,9 +44,14 @@
     }
 
     header {
-      text-align: center;
-      padding: 2rem;
-    }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px; /* Adjust this value to control the space */
+}
 
     nav {
       display: flex;
@@ -87,66 +107,130 @@
     }
 
     .centered {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+    .card {
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
   </style>
 </head>
+
+
+
 <body>
   <div id="particles-js" class="particle-container"></div>
   <header>
-    <h1 class="centered">Sami Ansari</h1>
+    <div class="centered">
+      <h1>Sami Ansari</h1>
+      <div class="icon-container">
+        <a href="mailto:youremail@example.com" target="_blank">
+          <i class="fas fa-envelope fa-2x mx-2"></i>
+        </a>
+        <a href="https://github.com/sami-ansari" target="_blank">
+          <i class="fab fa-github fa-2x mx-2"></i>
+        </a>
+      </div>
+    </div>
   </header>
+  
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Previous Work Experience</a>
+    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
   <main>
+
+
+
     <section id="about">
-      <h2>About</h2>
-      <p>Highly motivated and results-driven professional with over 3 years of experience in providing exceptional customer service, streamlining office operations, and implementing process improvements. Strong organizational and time management skills, with a proven ability to meet and exceed expectations for productivity and accuracy. Proficient in Microsoft Office, including proficiency in Google AppScript for automating and stream
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>Python and C Programming</li>
-            <li>Microsoft Office & Google AppScript</li>
-            <li>Web Development (HTML, CSS, JavaScript)</li>
-            <li>Computer Hardware & Troubleshooting</li>
-            <li>LaTeX for Document Preparation</li>
-          </ul>
-        </section>
-        <section id="projects">
-          <h2>Projects</h2>
-          <ul>
-            <li>tDCS Neuro-Helmet</li>
+      <div class="card">
+        <h2>About</h2>
+        <p>
+          Highly motivated and results-driven professional with over 3 years of experience in providing exceptional customer service, streamlining office operations, and implementing process improvements. Strong organizational and time management skills, with a proven ability to meet and exceed expectations for productivity and accuracy. Proficient in Microsoft Office, including proficiency in Google AppScript for automating and streamlining tasks.
+        </p>
+      </div>
+    </section>
+
+            <section id="skills">
+          <div class="card">
+            <h2>Skills</h2>
             <ul>
-              <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
-              <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
-              <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
-              <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
-              <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
-            </ul>  
-            <li>VPCI Film Festival</li>
-            <ul>
-              <li>Organized and executed a successful film festival for VPCI, featuring student submissions from within the school</li>
-              <li>Invited and hosted high-profile Canadian MPs from various Toronto constituencies to attend and participate in the event</li>
-              <li>Coordinated closely with school administration and staff to ensure smooth and successful execution of the festival</li>
-              <li>Developed and maintained relationships with external partners and sponsors to secure funding and support for the event</li>
-              <li>Utilized various marketing strategies, including social media, to increase awareness and attendance</li>
-              <li>Coordinated with the technical team for audiovisual arrangements and ensured seamless execution of the festival</li>
-              <li>Received positive feedback and praise for the successful organization and execution of the event from attendees, including students, staff, and MPs.</li>
+              <li>Python and C Programming</li>
+              <li>Microsoft Office & Google AppScript</li>
+              <li>Web Development (HTML, CSS, JavaScript)</li>
+              <li>Computer Hardware & Troubleshooting</li>
+              <li>LaTeX for Document Preparation</li>
             </ul>
+          </div>
         </section>
+        
+        </section>
+
+
+
+        <section id="projects">
+          <div class="card">
+            <h2>Projects</h2>
+            <div id="projects-container">
+              <div id="github-projects"></div>
+              <div id="other-projects">
+                <div class="card">
+                <h3>tDCS Neuro-Helmet</h3>
+                <ul>
+                  <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
+                  <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
+                  <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
+                  <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
+                  <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>VPCI Film Festival</h3>
+                <ul>
+                  <li>Organized and executed a successful film festival for VPCI, featuring student submissions from within the school</li>
+                  <li>Invited and hosted high-profile Canadian MPs from various Toronto constituencies to attend and participate in the event</li>
+                  <li>Coordinated closely with school administration and staff to ensure smooth and successful execution of the festival</li>
+                  <li>Developed and maintained relationships with external partners and sponsors to secure funding and support for the event</li>
+                  <li>Utilized various marketing strategies, including social media, to increase awareness and attendance</li>
+                  <li>Coordinated with the technical team for audiovisual arrangements and ensured seamless execution of the festival</li>
+                  <li>Received positive feedback and praise for the successful organization and execution of the event from attendees, including students, staff, and MPs.</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+
         <section id="experience">
+          <div class="card">
           <h2>Work Experience</h2>
           <ul>
-            <li>
-              <strong>P&A Medical</strong> | Medical Office Assistant | Toronto, ON | Nov 2022 - Present
+              <div class="card">
+              <strong>P&A Medical</strong> Medical Office Assistant | Toronto, ON | Nov 2022 - Present
               <ul>
                 <li>Provided valuable insights and suggestions to improve the overall doctor and patient experience</li>
                 <li>Assisted doctors in streamlining their daily workflow to increase productivity and efficiency</li>
@@ -154,9 +238,9 @@
                 <li>Consistently received positive feedback from patients and colleagues for exceptional customer service, communication skills and attention to detail.</li>
                 <li>Made a measurable impact on the overall functioning and success of the medical practice.</li>
               </ul>
-            </li>
-            <li>
-              <strong>Academic Tutor</strong> | Manchester, England | Nov 2021 - Present
+              </div>
+              <div class="card">
+              <strong>Academic Tutor</strong> Manchester, England | Nov 2021 - Present
               <ul>
                 <li>Specialized in 11+ exam preparation, providing personalized instruction to students</li>
                 <li>Developed and implemented tailored lesson plans to meet the individual needs of each student</li>
@@ -166,32 +250,40 @@
                 <li>Worked closely with parents and guardians to set and achieve educational goals for the student</li>
                 <li>Consistently received positive feedback from parents and students for exceptional teaching and mentoring skills</li>
               </ul>
-            </li>
-            <!-- Add more work experience list items here -->
+              </div>
           </ul>
-  
         </section>
+
+
+
         <section id="contact">
+          <div class="card">
           <h2>Contact</h2>
-          <p>Email: SAnsari2805@Outlook.com</p>
+          <p>Email: <a href = "mailto: SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a></p>
           <p>Phone: +1 (647) 289-6889</p>
+          <p>Github: <a href="https://github.com/y0usaf"> Github.com/y0usaf</a></p>
+        </div>
         </section>
+
       </main>
       <footer>
         &copy; 2023 Sami Ansari. All rights reserved.
       </footer>
       <div class="dark-mode-toggle">🌙</div>
     </body>
+
+
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
       particlesJS('particles-js', {
         particles: {
           number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: '#FFFFFF' },
+          color: { value: '#AAAAAA' },
           shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 } },
           opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
           size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-          line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+          line_linked: { enable: true, distance: 150, color: '#AAAAAA', opacity: 0.4, width: 1 },
           move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
         },
         interactivity: {
@@ -205,20 +297,66 @@
       document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
   
       function toggleDarkMode() {
-        const bodyStyles = getComputedStyle(document.body);
-        if (bodyStyles.getPropertyValue('--text-color') === '#f5f5f5') {
-          document.body.style.setProperty('--text-color', '#222');
-          document.body.style.setProperty('--background-color', '#f5f5f5');
-          document.body.style.setProperty('--accent-color', '#4CAF50');
-          document
-          .querySelector('.dark-mode-toggle').textContent = '☀️';
-      } else {
-        document.body.style.setProperty('--text-color', '#f5f5f5');
-        document.body.style.setProperty('--background-color', '#222');
-        document.body.style.setProperty('--accent-color', '#4CAF50');
-        document.querySelector('.dark-mode-toggle').textContent = '🌙';
-      }
+  const bodyStyles = getComputedStyle(document.body);
+  if (bodyStyles.getPropertyValue('--text-color') === '#f5f5f5') {
+    document.body.style.setProperty('--text-color', '#FFFFFF');
+    document.body.style.setProperty('--background-color', '#f5f5f5');
+    document.body.style.setProperty('--accent-color', '#4CAF50');
+    document.body.style.setProperty('--card-background-color', '#FFFFFF88');
+    document.body.style.setProperty('--card-text-color', '#000000');
+    document.querySelector('.dark-mode-toggle').textContent = '☀️';
+  } else {
+    document.body.style.setProperty('--text-color', '#f5f5f5');
+    document.body.style.setProperty('--background-color', '#000000');
+    document.body.style.setProperty('--accent-color', '#4CAF50');
+    document.body.style.setProperty('--card-background-color', '#33333388');
+    document.body.style.setProperty('--card-text-color', '#FFFFFF');
+    document.querySelector('.dark-mode-toggle').textContent = '🌙';
+  }
+}
+
+    
+async function populateProjects() {
+  const username = 'y0usaf';
+  const apiUrl = `https://api.github.com/users/${username}/repos?type=public`;
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
     }
+    const repositories = await response.json();
+    const githubProjectsContainer = document.querySelector('#github-projects');
+
+    repositories.forEach((repo) => {
+      const sectionCard = document.createElement('div');
+      sectionCard.className = 'card';
+      sectionCard.style = 'margin-bottom: 2rem; padding: 2rem;';
+
+      const sectionCardTitle = document.createElement('h3');
+      sectionCardTitle.textContent = repo.name;
+      sectionCard.appendChild(sectionCardTitle);
+
+      const repoCardDescription = document.createElement('p');
+      repoCardDescription.textContent = repo.description || 'No description available';
+      sectionCard.appendChild(repoCardDescription);
+
+      const repoCardLink = document.createElement('a');
+      repoCardLink.href = repo.html_url;
+      repoCardLink.className = 'btn btn-primary';
+      repoCardLink.textContent = 'View on GitHub';
+      repoCardLink.target = '_blank';
+      sectionCard.appendChild(repoCardLink);
+
+      githubProjectsContainer.appendChild(sectionCard);
+    });
+  } catch (error) {
+    console.error(`Error fetching repositories: ${error}`);
+  }
+}
+
+
+  // Call the populateProjects function
+  populateProjects();
   </script>
 </html>
   
