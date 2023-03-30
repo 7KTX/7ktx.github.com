@@ -12,23 +12,25 @@
 :root {
   /* Light mode */
   --text-color-light: #000000;
-  --background-color-light: #ffffff;
-  --accent-color-light: #4CAF50;
-  --nav-link-color-light: #000000;
-  --nav-link-hover-color-light: #4CAF50;
-  --card-background-color-light: #eeeeee;
-  --card-text-color-light: #333333;
+  --background-color-light: #FFFFFF;
+  --accent-color-light: #4C00FF;
+  --nav-link-hover-color-light: #4C00FF;
+  --card-background-color-light: #FFFFFF55;
 
   /* Dark mode */
-  --text-color-dark: #f5f5f5;
+  --text-color-dark: #FFFFFF;
   --background-color-dark: #000000;
-  --accent-color-dark: #4CAF50;
-  --nav-link-color-dark: #f5f5f5;
-  --nav-link-hover-color-dark: #4CAF50;
-  --card-background-color-dark: #33333388;
-  --card-text-color-dark: #ffffff;
-}
+  --accent-color-dark: #4C5EAf;
+  --nav-link-hover-color-dark: #4C5EAf;
+  --card-background-color-dark: #33333355;
 
+  /* Current theme colors */
+  --text-color: var(--text-color-dark);
+  --background-color: var(--background-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --nav-link-hover-color: var(--nav-link-hover-color-dark);
+  --card-background-color: var(--card-background-color-dark);
+}
 
     * {
       box-sizing: border-box;
@@ -50,24 +52,26 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 50px; /* Adjust this value to control the space */
-}
+  margin-bottom: 50px;
+  } 
 
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding-bottom: 2rem;
+      color: var(--text-color);
     }
 
     nav a {
       text-decoration: none;
-      color: var(--nav-link-color);
+      color: var(--text-color);
       transition: color 0.3s;
     }
 
     nav a:hover {
       color: var(--nav-link-hover-color);
+      transform: scale(1.2);
     }
 
     main {
@@ -122,13 +126,14 @@
 
     .card {
     background-color: var(--card-background-color);
-    color: var(--card-text-color);
+    color: var(--text-color);
     border-radius: 5px;
     padding: 2rem;
     margin-bottom: 2rem;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
@@ -143,10 +148,10 @@
     <div class="centered">
       <h1>Sami Ansari</h1>
       <div class="icon-container">
-        <a href="mailto:youremail@example.com" target="_blank">
+        <a href="mailto:SAnsari2805@Outlook.com" target="_blank">
           <i class="fas fa-envelope fa-2x mx-2"></i>
         </a>
-        <a href="https://github.com/sami-ansari" target="_blank">
+        <a href="https://github.com/y0usaf" target="_blank">
           <i class="fab fa-github fa-2x mx-2"></i>
         </a>
       </div>
@@ -298,20 +303,22 @@
   
       function toggleDarkMode() {
   const bodyStyles = getComputedStyle(document.body);
-  if (bodyStyles.getPropertyValue('--text-color') === '#f5f5f5') {
-    document.body.style.setProperty('--text-color', '#FFFFFF');
-    document.body.style.setProperty('--background-color', '#f5f5f5');
-    document.body.style.setProperty('--accent-color', '#4CAF50');
-    document.body.style.setProperty('--card-background-color', '#FFFFFF88');
-    document.body.style.setProperty('--card-text-color', '#000000');
+  const isDarkMode = bodyStyles.getPropertyValue('--text-color') === bodyStyles.getPropertyValue('--text-color-dark');
+
+  if (isDarkMode) {
+    document.body.style.setProperty('--text-color', 'var(--text-color-light)');
+    document.body.style.setProperty('--background-color', 'var(--background-color-light)');
+    document.body.style.setProperty('--accent-color', 'var(--accent-color-light)');
+    document.body.style.setProperty('--card-background-color', 'var(--card-background-color-light)');
     document.querySelector('.dark-mode-toggle').textContent = '☀️';
+    document.body.setAttribute('data-theme', 'light');
   } else {
-    document.body.style.setProperty('--text-color', '#f5f5f5');
-    document.body.style.setProperty('--background-color', '#000000');
-    document.body.style.setProperty('--accent-color', '#4CAF50');
-    document.body.style.setProperty('--card-background-color', '#33333388');
-    document.body.style.setProperty('--card-text-color', '#FFFFFF');
+    document.body.style.setProperty('--text-color', 'var(--text-color-dark)');
+    document.body.style.setProperty('--background-color', 'var(--background-color-dark)');
+    document.body.style.setProperty('--accent-color', 'var(--accent-color-dark)');
+    document.body.style.setProperty('--card-background-color', 'var(--card-background-color-dark)');
     document.querySelector('.dark-mode-toggle').textContent = '🌙';
+    document.body.setAttribute('data-theme', 'dark');
   }
 }
 
