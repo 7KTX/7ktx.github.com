@@ -8,144 +8,152 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
- <style>
-:root {
-  /* Light mode */
-  --text-color-light: #000000;
-  --background-color-light: #FFFFFF;
-  --accent-color-light: #4C00FF;
-  --nav-link-hover-color-light: #4C00FF;
-  --card-background-color-light: #FFFFFF55;
-
-  /* Dark mode */
-  --text-color-dark: #FFFFFF;
-  --background-color-dark: #000000;
-  --accent-color-dark: #4C5EAf;
-  --nav-link-hover-color-dark: #4C5EAf;
-  --card-background-color-dark: #33333355;
-
-  /* Current theme colors */
-  --text-color: var(--text-color-dark);
-  --background-color: var(--background-color-dark);
-  --accent-color: var(--accent-color-dark);
-  --nav-link-hover-color: var(--nav-link-hover-color-dark);
-  --card-background-color: var(--card-background-color-dark);
-}
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+  <style>
+    :root {
+      /* Light mode */
+      --text-color-light: #000000;
+      --background-color-light: #FFFFFF;
+      --accent-color-light: #4C00FF;
+      --nav-link-hover-color-light: #4C00FF;
+      --card-background-color-light: #FFFFFF55;
+    
+      /* Dark mode */
+      --text-color-dark: #FFFFFF;
+      --background-color-dark: #000000;
+      --accent-color-dark: #4C5EAf;
+      --nav-link-hover-color-dark: #4C5EAf;
+      --card-background-color-dark: #33333355;
+    
+      /* Current theme colors */
+      --text-color: var(--text-color-dark);
+      --background-color: var(--background-color-dark);
+      --accent-color: var(--accent-color-dark);
+      --nav-link-hover-color: var(--nav-link-hover-color-dark);
+      --card-background-color: var(--card-background-color-dark);
     }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 50px;
-  } 
-
-    nav {
+    
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          font-family: 'Roboto', sans-serif;
+          background-color: var(--background-color);
+          color: var(--text-color);
+          transition: background-color 0.3s, color 0.3s;
+        }
+    
+        header {
+      position: relative;
+      height: 100vh;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding-bottom: 2rem;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 50px;
+      } 
+    
+        nav {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          padding-bottom: 2rem;
+          color: var(--text-color);
+        }
+    
+        nav a {
+          text-decoration: none;
+          color: var(--text-color);
+          transition: color 0.3s;
+        }
+    
+        nav a:hover {
+          color: var(--nav-link-hover-color);
+          transform: scale(1.2);
+        }
+    
+        main {
+          padding: 2rem;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          text-align: center;
+          padding-bottom: 1rem;
+        }
+    
+    
+        footer {
+          text-align: center;
+          padding: 1rem;
+          font-size: 0.8rem;
+        }
+    
+        .dark-mode-toggle {
+          position: fixed;
+          bottom: 2rem;
+          right: 2rem;
+          font-size: 2rem;
+          cursor: pointer;
+          transition: transform 0.3s;
+        }
+    
+        .dark-mode-toggle:hover {
+          transform: scale(1.2);
+        }
+    
+        .particle-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+    
+        .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .card {
+      background-color: var(--card-background-color);
       color: var(--text-color);
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--text-color);
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--nav-link-hover-color);
-      transform: scale(1.2);
-    }
-
-    main {
+      border-radius: 20px;
       padding: 2rem;
+      margin-bottom: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 20px 20px 60px #var(--card-background-color),
+                 -20px -20px 60px var(--card-background-color);
+      transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* add a transition for the hover effect */
+      border: 5px solid var(--card-background-color); /* add a border to the card */
     }
-
-    h2 {
-      padding-bottom: 1rem;
+    
+    .card:hover {
+      border: 5px solid var(--accent-color); /* animate the border on hover */
+      box-shadow: 25px 25px 70px #var(--card-background-color),
+                 -25px -25px 70px var(--card-background-color);
     }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
-    }
-
-    .dark-mode-toggle {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      font-size: 2rem;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .dark-mode-toggle:hover {
-      transform: scale(1.2);
-    }
-
-    .particle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.card {
-  background-color: var(--card-background-color);
-  color: var(--text-color);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow:  20px 20px 60px #var(--card-background-color),
-             -20px -20px 60px ;var(--card-background-color);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* add a transition for the hover effect */
-}
-
-.card:hover {
-  transform: translate(-5px, -5px); /* add a subtle animation to the card on hover */
-  box-shadow:  25px 25px 70px #var(--card-background-color),
-             -25px -25px 70px ;var(--card-background-color);
-}
-
-
-    </style>
+    
+    
+    
+        </style>
 </head>
 
 
@@ -304,9 +312,12 @@
         <section id="contact">
           <div class="card">
           <h2>Contact</h2>
-          <p>Email: <a href = "mailto: SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a></p>
-          <p>Phone: +1 (647) 289-6889</p>
-          <p>Github: <a href="https://github.com/y0usaf"> Github.com/y0usaf</a></p>
+          <p><i class="fas fa-envelope"></i>
+            <a href="mailto:SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a></p>
+          <p><i class="fas fa-phone"></i>
+            <a href="tel:+16472896889">+1 (647) 289-6889</a></p>
+          <p> <i class="fab fa-github"></i>
+            <a href="https://github.com/y0usaf">Github.com/y0usaf</a></p>
         </div>
         </section>
 
