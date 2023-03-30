@@ -124,20 +124,28 @@
   margin-top: 10px;
 }
 
-    .card {
-    background-color: var(--card-background-color);
-    color: var(--text-color);
-    border-radius: 5px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    
+.card {
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:  20px 20px 60px #var(--card-background-color),
+             -20px -20px 60px ;var(--card-background-color);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* add a transition for the hover effect */
+}
+
+.card:hover {
+  transform: translate(-5px, -5px); /* add a subtle animation to the card on hover */
+  box-shadow:  25px 25px 70px #var(--card-background-color),
+             -25px -25px 70px ;var(--card-background-color);
 }
 
 
-  </style>
+    </style>
 </head>
 
 
@@ -146,6 +154,7 @@
   <div id="particles-js" class="particle-container"></div>
   <header>
     <div class="centered">
+      <img src="https://avatars.githubusercontent.com/y0usaf" alt="Your Profile Picture" width="150">
       <h1>Sami Ansari</h1>
       <div class="icon-container">
         <a href="mailto:SAnsari2805@Outlook.com" target="_blank">
@@ -157,6 +166,7 @@
       </div>
     </div>
   </header>
+  
   
   <nav>
     <a href="#about">About</a>
