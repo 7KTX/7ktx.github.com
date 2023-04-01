@@ -8,44 +8,38 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-  <style>
-    :root {
-      /* Light mode */
-      --text-color-light: #000000;
-      --background-color-light: #FFFFFF;
-      --accent-color-light: #af8cff;
-      --nav-link-hover-color-light: #af8cff;
-      --card-background-color-light: #DDDDDD33;
-    
-      /* Dark mode */
-      --text-color-dark: #FFFFFF;
-      --background-color-dark: #000000;
-      --accent-color-dark: #4C5EAf;
-      --nav-link-hover-color-dark: #4C5EAf;
-      --card-background-color-dark: #33333355;
-    
-      /* Current theme colors */
-      --text-color: var(--text-color-dark);
-      --background-color: var(--background-color-dark);
-      --accent-color: var(--accent-color-dark);
-      --nav-link-hover-color: var(--nav-link-hover-color-dark);
-      --card-background-color: var(--card-background-color-dark);
+<style>
+:root {
+  /* Light mode */
+  --text-color-light: #000000;
+  --accent-color-light: #ecc2ff;
+  --background-color-light: linear-gradient(to bottom, #ffffff, var(--accent-color-light));
+
+
+  /* Dark mode */
+  --text-color-dark: #FFFFFF;
+  --accent-color-dark: #330055;
+  --background-color-dark: linear-gradient(to bottom right,#000000, var(--accent-color-dark));
+
+  /* Current theme colors */
+  --text-color: var(--text-color-dark);
+  --background-color: var(--background-color-dark);
+  --accent-color: var(--accent-color-dark);
+}
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
-    
-        body {
-          font-family: 'Roboto', sans-serif;
-          background-color: var(--background-color);
-          color: var(--text-color);
-          transition: background-color 0.3s, color 0.3s;
-        }
-    
-        header {
+    body {
+  font-family: 'Roboto', sans-serif;
+  background-image: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+  
+    header {
       position: relative;
       height: 100vh;
       display: flex;
@@ -53,107 +47,210 @@
       align-items: center;
       flex-direction: column;
       margin-bottom: 50px;
-      } 
-    
-        nav {
-          display: flex;
-          justify-content: center;
-          gap: 2rem;
-          padding-bottom: 2rem;
-          color: var(--text-color);
-        }
-    
-        nav a {
-          text-decoration: none;
-          color: var(--text-color);
-          transition: color 0.3s;
-        }
-    
-        nav a:hover {
-          color: var(--nav-link-hover-color);
-          transform: scale(1.2);
-        }
-    
-        main {
-          padding: 2rem;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          text-align: center;
-          padding-bottom: 1rem;
-        }
-    
-    
-        footer {
-          text-align: center;
-          padding: 1rem;
-          font-size: 0.8rem;
-        }
-    
-        .dark-mode-toggle {
-          position: fixed;
-          bottom: 2rem;
-          right: 2rem;
-          font-size: 2rem;
-          cursor: pointer;
-          transition: transform 0.3s;
-        }
-    
-        .dark-mode-toggle:hover {
-          transform: scale(1.2);
-        }
-    
-        .particle-container {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-    
-        .centered {
+      background-image: url('https://www.your-image-url.com/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  
+    nav {
       display: flex;
       justify-content: center;
-      align-items: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      color: var(--text-color);
+      margin-bottom: 2rem;
+    }
+  
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 0.25rem 0.5rem;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
+    }
+  
+    nav a:hover {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+  
+    main {
+      padding: 2rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+  
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      background-color: #00000000
+      border-top: 5px solid var(--accent-color);
+    }
+  
+    .dark-mode-toggle {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+  
+    .dark-mode-toggle:hover {
+      transform: scale(1.2);
+    }
+  
+    .particle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+     }
+  
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center
       flex-direction: column;
     }
-    
-    .icon-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
-    
-    .card {
-      background-color: var(--card-background-color);
-      color: var(--text-color);
-      border-radius: 20px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 20px 20px 60px #var(--card-background-color),
-                 -20px -20px 60px var(--card-background-color);
-      transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* add a transition for the hover effect */
-      border: 5px solid var(--card-background-color); /* add a border to the card */
-    }
-    
-    .card:hover {
-      border: 5px solid var(--accent-color); /* animate the border on hover */
-      box-shadow: 25px 25px 70px #var(--card-background-color),
-                 -25px -25px 70px var(--card-background-color);
-    }
-    
-    
-    
-        </style>
+
+.icon-container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+margin-top: 10px;
+}
+
+.icon-container a {
+color: var(--text-color);
+font-size: 1.5rem;
+transition: color 0.3s;
+}
+
+.icon-container a:hover {
+color: var(--accent-color);
+}
+
+.card {
+  background-color: #00000000;
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.card-header {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.card-content {
+  display: none;
+  padding-top: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.card-open .card-content {
+  display: block;
+}
+
+
+/* Animation styles */
+.card, header, nav a {
+opacity: 0;
+animation: fade-in-up 1s ease-out forwards;
+}
+
+nav a:nth-child(1) {
+animation-delay: 0.1s;
+}
+
+nav a:nth-child(2) {
+animation-delay: 0.2s;
+}
+
+nav a:nth-child(3) {
+animation-delay: 0.3s;
+}
+
+nav a:nth-child(4) {
+animation-delay: 0.4s;
+}
+
+header {
+animation-delay: 0.5s;
+}
+
+.card {
+animation-delay: 0.6s;
+}
+
+@keyframes fade-in-up {
+0% {
+opacity: 0;
+transform: translateY(50px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--accent-color);
+}
+
+</style>
 </head>
 
 
@@ -161,19 +258,22 @@
 <body>
   <div id="particles-js" class="particle-container"></div>
   <header>
-    <div class="centered">
-      <img src="https://avatars.githubusercontent.com/y0usaf" alt="Your Profile Picture" width="150">
+    <div class="header-content">
+      <img class="profile-image" src="https://avatars.githubusercontent.com/y0usaf" alt="Profile image" />
       <h1>Sami Ansari</h1>
+      <b></b>
+      <h2>(Also known as Y0USAF)</h2>
       <div class="icon-container">
-        <a href="mailto:SAnsari2805@Outlook.com" target="_blank">
-          <i class="fas fa-envelope fa-2x mx-2"></i>
+        <a href="https://github.com/y0usaf" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
         </a>
-        <a href="https://github.com/y0usaf" target="_blank">
-          <i class="fab fa-github fa-2x mx-2"></i>
+        <a href="mailto:y0usaf@example.com">
+          <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
   </header>
+  
   
   
   <nav>
@@ -220,15 +320,20 @@
               <div id="github-projects"></div>
               <div id="other-projects">
                 <div class="card">
-                <h3>tDCS Neuro-Helmet</h3>
-                <ul>
-                  <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
-                  <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
-                  <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
-                  <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
-                  <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
-                </ul>
-              </div>
+                  <div class="card-header" onclick="toggleCard(event)">
+                    <h3>tDCS Neuro-Helmet</h3>
+                  </div>
+                  <div class="card-content">
+                    <ul>
+                      <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
+                      <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
+                      <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
+                      <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
+                      <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
+                    </ul>
+                  </div>
+                </div>
+                
               <div class="card">
                 <h3>VPCI Film Festival</h3>
                 <ul>
@@ -311,15 +416,24 @@
 
         <section id="contact">
           <div class="card">
-          <h2>Contact</h2>
-          <p><i class="fas fa-envelope"></i>
-            <a href="mailto:SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a></p>
-          <p><i class="fas fa-phone"></i>
-            <a href="tel:+16472896889">+1 (647) 289-6889</a></p>
-          <p> <i class="fab fa-github"></i>
-            <a href="https://github.com/y0usaf">Github.com/y0usaf</a></p>
-        </div>
+            <h2>Contact</h2>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+16472896889">+1 (647) 289-6889</a>
+              </p>
+              <p>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/y0usaf">Github.com/y0usaf</a>
+              </p>
+            </div>
+          </div>
         </section>
+        
 
       </main>
       <footer>
@@ -352,7 +466,7 @@
   
       document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
   
-      function toggleDarkMode() {
+function toggleDarkMode() {
   const bodyStyles = getComputedStyle(document.body);
   const isDarkMode = bodyStyles.getPropertyValue('--text-color') === bodyStyles.getPropertyValue('--text-color-dark');
 
@@ -360,18 +474,21 @@
     document.body.style.setProperty('--text-color', 'var(--text-color-light)');
     document.body.style.setProperty('--background-color', 'var(--background-color-light)');
     document.body.style.setProperty('--accent-color', 'var(--accent-color-light)');
-    document.body.style.setProperty('--card-background-color', 'var(--card-background-color-light)');
+    document.body.style.transition = 'background-color 0.5s, color 0.5s, box-shadow 0.5s, background-image 0.5s';
     document.querySelector('.dark-mode-toggle').textContent = '☀️';
     document.body.setAttribute('data-theme', 'light');
   } else {
     document.body.style.setProperty('--text-color', 'var(--text-color-dark)');
     document.body.style.setProperty('--background-color', 'var(--background-color-dark)');
     document.body.style.setProperty('--accent-color', 'var(--accent-color-dark)');
-    document.body.style.setProperty('--card-background-color', 'var(--card-background-color-dark)');
+    document.body.style.transition = 'background-color 0.5s, color 0.5s, box-shadow 0.5s, background-image 0.5s';
     document.querySelector('.dark-mode-toggle').textContent = '🌙';
     document.body.setAttribute('data-theme', 'dark');
   }
 }
+
+
+
 
     
 async function populateProjects() {
@@ -410,6 +527,11 @@ async function populateProjects() {
   } catch (error) {
     console.error(`Error fetching repositories: ${error}`);
   }
+}
+
+function toggleCard(event) {
+  const card = event.target.closest('.card');
+  card.classList.toggle('card-open');
 }
 
 
