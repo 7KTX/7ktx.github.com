@@ -1,0 +1,202 @@
+
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+\usepackage[default]{roboto}
+
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Sami Ansari} \\ \vspace{1pt}
+    \small +1 (647) 289-6889 $|$ \href{mailto:SAnsari2805@Outlook.com}{\underline{SAnsari2805@Outlook.com}} $|$ 
+    \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/sami-ansari-205565155/}} $|$
+    \href{https://github.com/7KTX}{\underline{github.com/7KTX}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Cohere}{Toronto, Ontario, Canada}
+      {}{}
+
+      % Subheading for Intern of Technical Staff
+      \resumeSubSubheading{Intern of Technical Staff}{Apr 2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Enhanced LLM math performance by 3\% by contributing a fully synthetic post-training dataset developed without human annotation.}
+          \resumeItem{Co-designed and deployed a scalable data labeling platform as part of a four-member team, efficiently processing over 100,000 continuous tasks.}
+          \resumeItem{Applied advanced synthetic data generation techniques for LLM training, enhancing model accuracy and scalability.}
+          \resumeItem{Implemented comprehensive benchmarking evaluations to measure and optimize LLM performance.}
+          \resumeItem{Conducted model ablation studies to assess the impact of specific datasets on model performance across diverse categories.}
+        \resumeItemListEnd
+
+      % Subheading for Senior Data Quality Specialist
+      \resumeSubSubheading{Senior Data Quality Specialist}{May 2023 -- Apr 2024}
+        \resumeItemListStart
+          \resumeItem{Engineered advanced Python applications to audit and analyze over 40,000 tasks, uncovering critical insights and complex data labeling patterns that informed machine learning model enhancements.}
+          \resumeItem{Directed a team of over 200 AI annotators, cultivating a culture of excellence and implementing best practices that elevated data quality and annotation accuracy.}
+          \resumeItem{Spearheaded the development of an innovative ticketing system, streamlining feedback to AI annotators and boosting overall data quality.}
+          \resumeItem{Championed and executed AI annotation best practices, optimizing workflows and enhancing LLM performance.}
+          \resumeItem{Recognized for delivering pivotal insights that improved LLM performance within data quality operations.}
+          \resumeItem{Maintained and strengthened strategic vendor relationships, resolving complex queries on STEM and code data quality and styling to ensure consistent data standards.}
+          \resumeItem{Devised and implemented comprehensive assessment criteria for AI Data Trainer recruitment, enhancing candidate selection effectiveness.}
+          \resumeItem{Proctored and evaluated AI Data Trainer assessments, contributing to the onboarding of high-caliber talent.}
+          \resumeItem{Continuously expanded expertise in AI and LLM behaviors to enhance strategic decision-making.}
+        \resumeItemListEnd
+
+      % Subheading for Data Quality Specialist
+      \resumeSubSubheading{Data Quality Specialist}{May 2023 -- May 2023}
+        \resumeItemListStart
+          \resumeItem{Enhanced language model capabilities by spearheading data quality improvement initiatives.}
+          \resumeItem{Delivered critical annotations and insights that boosted LLM performance.}
+          \resumeItem{Leveraged advanced tools and platforms to rigorously uphold data quality standards.}
+        \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Toronto}{Toronto, Ontario}
+      {Bachelor of Science in Computer Science and Mathematics}{Sep. 2017 -- May 2022}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AI Data Annotation Platform} $|$ \emph{Python, JavaScript, React, Firebase}}{Jan 2024 -- Oct 2024}
+          \resumeItemListStart
+            \resumeItem{Developed and maintained a full-stack web application to streamline AI data annotation processes.}
+            \resumeItem{Implemented a user-friendly frontend with React and managed backend services using Firebase.}
+            \resumeItem{Optimized data handling and storage with Firestore for efficient retrieval and scalability.}
+            \resumeItem{The project's success contributed to receiving multiple machine learning internship offers.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, Bash} \\
+     \textbf{Frameworks}{: FastAPI, Streamlit, Dask, Polars, Pandas, Pydantic, Graphviz, Sympy, Redis, DuckDB, JAX, Reactivex} \\
+     \textbf{Developer Tools}{: Git, Docker, Google Cloud Platform, VS Code, PyCharm, Neovim} \\
+     \textbf{Libraries}{: NumPy, Matplotlib, requests, rich, click, inquirer, cohere, wandb, plotly, nltk, faker, tokenizers}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

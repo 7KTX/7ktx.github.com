@@ -1,633 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sami Ansari</title>
     <style>
-         :root {
-            /* Light mode */
-            --text-color-light: #000000;
-            --accent-color-light: #ecc2ff;
-            /* Dark mode */
-            --text-color-dark: #FFFFFF;
-            --accent-color-dark: #330055;
-            /* Current theme colors */
-            --text-color: var(--text-color-dark);
-            --background-color: var(--background-color-dark);
-            --accent-color: var(--accent-color-dark);
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      nav {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: #000;
+        margin: 5px 10px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+        text-align: center;
+      }
+
+      p,
+      ul {
+        margin: 0.5em 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      a {
+        color: #0000ee;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .dark-mode {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .dark-mode nav a {
+        color: #fff;
+      }
+
+      .dark-mode a {
+        color: #0099ff;
+      }
+
+      .dark-mode a:hover {
+        text-decoration: underline;
+      }
+
+      #darkModeToggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 0.9em;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      #darkModeToggle:hover {
+        background-color: #333;
+      }
+
+      .dark-mode #darkModeToggle {
+        background-color: #fff;
+        color: #000;
+      }
+
+      .dark-mode #darkModeToggle:hover {
+        background-color: #ccc;
+      }
+
+      /* Mobile-friendly adjustments */
+      @media (max-width: 600px) {
+        .container {
+          padding: 10px;
         }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--text-color);
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 5s ease infinite;
-            height: 400vh;
-        }
-        
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        
-        header {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 50px;
-            background-image: url('https://www.your-image-url.com/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
+
         nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1rem 0;
-            color: var(--text-color);
-            margin-bottom: 2rem;
+          flex-direction: column;
+          align-items: center;
         }
-        
+
         nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            font-size: 1.1em;
-            padding: 0.25rem 0.5rem;
-            border-bottom: 2px solid transparent;
-            transition: color 0.3s, border-color 0.3s;
+          margin: 5px 0;
         }
-        
-        nav a:hover {
-            color: var(--accent-color);
-            border-color: var(--accent-color);
+
+        h1 {
+          font-size: 1.5em;
         }
-        
-        main {
-            padding: 2rem;
+
+        h2 {
+          font-size: 1.2em;
         }
-        
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            text-align: center;
-            padding-bottom: 1rem;
+
+        #darkModeToggle {
+          bottom: 10px;
+          right: 10px;
+          padding: 8px 12px;
+          font-size: 0.8em;
         }
-        
-        footer {
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.8rem;
-            background-color: #00000000 border-top: 5px solid var(--accent-color);
-        }
-        
-        .dark-mode-toggle {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        
-        .dark-mode-toggle:hover {
-            transform: scale(1.2);
-        }
-        
-        .particle-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        
-        .centered {
-            display: flex;
-            justify-content: center;
-            align-items: center flex-direction: column;
-        }
-        
-        .icon-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            margin-top: 10px;
-        }
-        
-        .icon-container a {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .icon-container a:hover {
-            color: var(--accent-color);
-        }
-        
-        .card {
-            background-color: #00000000;
-            color: var(--text-color);
-            border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            backdrop-filter: blur(3px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .card:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(5px);
-        }
-        /* Animation styles */
-        
-        .card,
-        header,
-        nav a {
-            opacity: 0;
-            animation: fade-in-up 1s ease-out forwards;
-        }
-        
-        nav a:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-        
-        nav a:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        nav a:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-        
-        nav a:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-        
-        header {
-            animation-delay: 0.5s;
-        }
-        
-        .card {
-            animation-delay: 0.6s;
-        }
-        
-        @keyframes fade-in-up {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .contact-info a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
+      }
     </style>
-</head>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a onclick="showSection('home')">🏠 Home</a>
+        <a onclick="showSection('education')">🎓 Education</a>
+        <a onclick="showSection('experience')">💼 Experience</a>
+        <a onclick="showSection('projects')">🛠️ Projects</a>
+        <a onclick="showSection('skills')">🔧 Skills</a>
+        <a onclick="showSection('contact')">📬 Contact</a>
+      </nav>
 
+      <div id="home" class="section">
+        <h1>👋 Hi, I'm Sami Ansari!</h1>
+        <p style="text-align: center">(Also known as Y0USAF)</p>
+        <p style="text-align: center">
+          <a href="https://www.linkedin.com/in/sami-ansari-205565155/"
+            >LinkedIn</a
+          >
+          | <a href="https://github.com/7KTX">GitHub</a> |
+          <a href="mailto:SAnsari2805@Outlook.com">Email Me</a>
+        </p>
+      </div>
 
+      <div id="education" class="section hidden">
+        <h2>🎓 Education</h2>
+        <ul>
+          <li>
+            <strong
+              >Bachelor of Science in Computer Science and Mathematics</strong
+            >, University of Toronto (Sep 2017 – May 2022)
+          </li>
+        </ul>
+      </div>
 
-<body>
-    <div id="particles-js" class="particle-container"></div>
-    <header>
-        <img class="profile-image" src="https://avatars.githubusercontent.com/y0usaf" alt="Profile image" />
-        <h1>Sami Ansari</h1>
-        <b></b>
-        <h2>(Also known as Y0USAF)</h2>
-        <div class="icon-container">
-            <a href="https://github.com/y0usaf" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:y0usaf@example.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </header>
+      <div id="experience" class="section hidden">
+        <h2>💼 Experience</h2>
+        <ul>
+          <li>
+            <strong>Intern of Technical Staff</strong>, Cohere, Toronto,
+            Ontario, Canada (Apr 2024 – Present)
+            <ul>
+              <li>
+                Enhanced LLM math performance by 3% through a fully synthetic
+                post-training dataset.
+              </li>
+              <li>
+                Co-designed and deployed a scalable data labeling platform,
+                processing over 100,000 tasks.
+              </li>
+              <li>
+                Applied synthetic data generation techniques for LLM training,
+                improving model accuracy.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Senior Data Quality Specialist</strong>, Cohere, Toronto,
+            Ontario, Canada (May 2023 – Apr 2024)
+            <ul>
+              <li>
+                Engineered Python applications to audit over 40,000 tasks,
+                uncovering critical insights.
+              </li>
+              <li>
+                Directed a team of 200+ AI annotators, implementing best
+                practices for data quality.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Data Quality Specialist</strong>, Cohere, Toronto, Ontario,
+            Canada (May 2023 – May 2023)
+            <ul>
+              <li>
+                Enhanced language model capabilities by spearheading data
+                quality improvement initiatives.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
+      <div id="projects" class="section hidden">
+        <h2>🛠️ Projects</h2>
+        <ul>
+          <li>
+            <strong>AI Data Annotation Platform</strong> | Python, JavaScript,
+            React, Firebase (Jan 2024 – Oct 2024)
+            <ul>
+              <li>
+                Developed and maintained a full-stack web application to
+                streamline AI data annotation.
+              </li>
+              <li>
+                Implemented a user-friendly frontend with React and managed
+                backend services using Firebase.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
+      <div id="skills" class="section hidden">
+        <h2>🔧 Skills</h2>
+        <ul>
+          <li>
+            <strong>Languages:</strong> Python, C/C++, SQL (Postgres),
+            JavaScript, HTML/CSS, Bash
+          </li>
+          <li>
+            <strong>Frameworks:</strong> FastAPI, Streamlit, Dask, Polars,
+            Pandas, Pydantic, Graphviz, Sympy, Redis, DuckDB, JAX, Reactivex
+          </li>
+          <li>
+            <strong>Developer Tools:</strong> Git, Docker, Google Cloud
+            Platform, VS Code, PyCharm, Neovim
+          </li>
+          <li>
+            <strong>Libraries:</strong> NumPy, Matplotlib, requests, rich,
+            click, inquirer, cohere, wandb, plotly, nltk, faker, tokenizers
+          </li>
+        </ul>
+      </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
+      <div id="contact" class="section hidden">
+        <h2>📬 Contact</h2>
+        <p>
+          Feel free to reach out to me via
+          <a href="mailto:SAnsari2805@Outlook.com">email</a> or connect with me
+          on
+          <a href="https://www.linkedin.com/in/sami-ansari-205565155/"
+            >LinkedIn</a
+          >!
+        </p>
+      </div>
+    </div>
 
+    <button id="darkModeToggle">🌙 Dark Mode</button>
 
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          if (section.id === sectionId) {
+            section.classList.remove("hidden");
+          } else {
+            section.classList.add("hidden");
+          }
+        });
+      }
 
-        <section id="about">
-            <div class="card">
-                <h2>About</h2>
-                <p>
-                    Highly motivated and results-driven professional with over 3 years of experience in providing exceptional customer service, streamlining office operations, and implementing process improvements. Strong organizational and time management skills, with a
-                    proven ability to meet and exceed expectations for productivity and accuracy. Proficient in Microsoft Office, including proficiency in Google AppScript for automating and streamlining tasks.
-                </p>
-            </div>
-        </section>
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+          if (document.body.classList.contains("dark-mode")) {
+            this.textContent = "☀️ Light Mode";
+          } else {
+            this.textContent = "🌙 Dark Mode";
+          }
+        });
 
-        <section id="skills">
-            <div class="card">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Experienced AI annotator, having worked with many LLMs</li>
-                    <li>Python and C Programming</li>
-                    <li>Microsoft Office & Google AppScript</li>
-                    <li>Web Development (HTML, CSS, JavaScript)</li>
-                    <li>Computer Hardware & Troubleshooting</li>
-                    <li>LaTeX for Document Preparation</li>
-                </ul>
-            </div>
-        </section>
-
-        </section>
-
-
-
-        <section id="projects">
-            <div class="card">
-                <h2>Projects</h2>
-                <div id="projects-container">
-                    <div id="github-projects"></div>
-                    <div class="card">
-                        <h3>tDCS Neuro-Helmet</h3>
-                        <ul>
-                            <li>Developed and constructed a tDCS neuro-helmet to study the effects of electronic brain stimulation</li>
-                            <li>Conducted extensive research on tDCS and its potential applications in cognitive enhancement and neurorehabilitation</li>
-                            <li>Utilized 3D printing and CAD software to design and fabricate the helmet, incorporating electrodes and a control module</li>
-                            <li>Conducted experiments on the helmet, measuring changes in cognitive performance and brain activity</li>
-                            <li>Developed skills in electronics design and fabrication, programming, and data analysis.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>VPCI Film Festival</h3>
-                    <ul>
-                        <li>Organized and executed a successful film festival for VPCI, featuring student submissions from within the school</li>
-                        <li>Invited and hosted high-profile Canadian MPs from various Toronto constituencies to attend and participate in the event</li>
-                        <li>Coordinated closely with school administration and staff to ensure smooth and successful execution of the festival</li>
-                        <li>Developed and maintained relationships with external partners and sponsors to secure funding and support for the event</li>
-                        <li>Utilized various marketing strategies, including social media, to increase awareness and attendance</li>
-                        <li>Coordinated with the technical team for audiovisual arrangements and ensured seamless execution of the festival</li>
-                        <li>Received positive feedback and praise for the successful organization and execution of the event from attendees, including students, staff, and MPs.</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-        </section>
-
-
-
-        <section id="experience">
-            <div class="card">
-                <h2>Work Experience</h2>
-                <ul>
-                    <div class="card">
-                        <h3>Cohere</h3>
-                        <h6>Data Quality Specialist | Toronto, ON | May 2023 - Present</h6>
-                        <ul>
-                            <li>Provided valuable annotations and insights to enhance the performance of language models (LLMs)</li>
-                            <li>Annotated and reviewed data to ensure high-quality training datasets for LLMs</li>
-                            <li>Collaborated with the development team to streamline annotation processes and improve efficiency</li>
-                            <li>Utilized tools and platforms to assess and maintain data quality standards</li>
-                            <li>Consistently demonstrated exceptional attention to detail and accuracy in annotation tasks</li>
-                            <li>Contributed to the overall enhancement of language models through data quality improvements</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>P&A Medical</h3>
-                        <h6>Medical Office Assistant | Toronto, ON | Nov 2022 - May 2023</h6>
-                        <ul>
-                            <li>Provided valuable insights and suggestions to improve the overall doctor and patient experience</li>
-                            <li>Assisted doctors in streamlining their daily workflow to increase productivity and efficiency</li>
-                            <li>Managed and programmed complex spreadsheets to improve office operations and efficiency using Microsoft Office, including proficiency in using Google AppsScript</li>
-                            <li>Consistently received positive feedback from patients and colleagues for exceptional customer service, communication skills and attention to detail.</li>
-                            <li>Made a measurable impact on the overall functioning and success of the medical practice.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Academic Tutor</h3>
-                        <h6>Manchester, England | Nov 2021 - Present</h6>
-                        <ul>
-                            <li>Specialized in 11+ exam preparation, providing personalized instruction to students</li>
-                            <li>Developed and implemented tailored lesson plans to meet the individual needs of each student</li>
-                            <li>Utilized a variety of teaching methods and materials to enhance student learning and engagement</li>
-                            <li>Assessed student progress and provided regular feedback to both students and parents</li>
-                            <li>Utilized technology and digital resources to supplement instruction and increase student engagement</li>
-                            <li>Worked closely with parents and guardians to set and achieve educational goals for the student</li>
-                            <li>Consistently received positive feedback from parents and students for exceptional teaching and mentoring skills</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Westhill Medical</h3>
-                        <h6>Administrative Assistant | Toronto, ON (Remote) |January 2019 - September 2022</h6>
-                        <ul>
-                            <li>Managed and organized large-scale data entry projects with a focus on accuracy and efficiency.</li>
-                            <li>Utilized Microsoft Office suite to develop spreadsheets and databases for data management.</li>
-                            <li>Collaborated with team members to ensure the smooth flow of information and data throughout the organization.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Rooks to Cooks</h3>
-                        <h6>Marketing Associate | Toronto, ON (Remote) |June 2021 - September 2021</h6>
-                        <ul>
-                            <li>Executed and reported on successful digital marketing campaigns using SEO/SEM and automation tools.</li>
-                            <li>Collaborated with cross-functional teams to develop growth-oriented marketing strategies.</li>
-                            <li>Proficient in creating various marketing materials, including email campaigns and social media posts.</li>
-                            <li>Skilled in optimizing campaign performance metrics using Google Analytics.</li>
-                            <li>Hands-on experience with diverse digital channels to enhance online presence.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Public Outreach</h3>
-                        <h6>Professional Fundraiser | Toronto, ON (Remote) |June 2021 - September 2021</h6>
-                        <ul>
-                            <li>Consistently exceeded fundraising goals by utilizing effective sales strategies, showcasing exceptional interpersonal skills</li>
-                            <li>Contributed to the growth and impact of non-profit organizations through successful fundraising efforts, demonstrating a strong track record of achieving objectives</li>
-                            <li>Developed valuable relationship-building and persuasion skills, which can be applied to collaboratively drive projects</li>
-                            <li>Gained experience in public speaking and presentation skills, with the ability to articulate technical concepts to non-technical audiences.</li>
-                        </ul>
-                    </div>
-
-
-
-                </ul>
-        </section>
-
-
-
-        <section id="contact">
-            <div class="card">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <p>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:SAnsari2805@Outlook.com">SAnsari2805@Outlook.com</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+16472896889">+1 (647) 289-6889</a>
-                    </p>
-                    <p>
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/y0usaf">Github.com/y0usaf</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-    </main>
-    <footer>
-        &copy; 2023 Sami Ansari. All rights reserved.
-    </footer>
-    <div class="dark-mode-toggle">🌙</div>
-</body>
-
-
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 80,
-                density: {
-                    enable: true,
-                    value_area: 800
-                }
-            },
-            color: {
-                value: '#AAAAAA'
-            },
-            shape: {
-                type: 'circle',
-                stroke: {
-                    width: 0,
-                    color: '#000000'
-                },
-                polygon: {
-                    nb_sides: 5
-                }
-            },
-            opacity: {
-                value: 0.5,
-                random: false,
-                anim: {
-                    enable: false,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            size: {
-                value: 3,
-                random: true,
-                anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.1,
-                    sync: false
-                }
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#AAAAAA',
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 6,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                }
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'repulse'
-                },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
-                },
-                resize: true
-            },
-            modes: {
-                grab: {
-                    distance: 400,
-                    line_linked: {
-                        opacity: 1
-                    }
-                },
-                bubble: {
-                    distance: 400,
-                    size: 40,
-                    duration: 2,
-                    opacity: 8,
-                    speed: 3
-                },
-                repulse: {
-                    distance: 200,
-                    duration: 0.4
-                },
-                push: {
-                    particles_nb: 4
-                },
-                remove: {
-                    particles_nb: 2
-                }
-            }
-        },
-        retina_detect: true
-    });
-
-    document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
-
-    function toggleDarkMode() {
-        const bodyStyles = getComputedStyle(document.body);
-        const isDarkMode = bodyStyles.getPropertyValue('--text-color') === bodyStyles.getPropertyValue('--text-color-dark');
-
-        if (isDarkMode) {
-            document.body.style.setProperty('--text-color', 'var(--text-color-light)');
-            document.body.style.setProperty('--background-color', 'var(--background-color-light)');
-            document.body.style.setProperty('--accent-color', 'var(--accent-color-light)');
-            document.body.style.transition = 'background-color 0.5s, color 0.5s, box-shadow 0.5s, background-image 0.5s';
-            document.querySelector('.dark-mode-toggle').textContent = '☀️';
-            document.body.setAttribute('data-theme', 'light');
-        } else {
-            document.body.style.setProperty('--text-color', 'var(--text-color-dark)');
-            document.body.style.setProperty('--background-color', 'var(--background-color-dark)');
-            document.body.style.setProperty('--accent-color', 'var(--accent-color-dark)');
-            document.body.style.transition = 'background-color 0.5s, color 0.5s, box-shadow 0.5s, background-image 0.5s';
-            document.querySelector('.dark-mode-toggle').textContent = '🌙';
-            document.body.setAttribute('data-theme', 'dark');
-        }
-    }
-
-
-
-
-
-    async function populateProjects() {
-        const username = 'y0usaf';
-        const apiUrl = `https://api.github.com/users/${username}/repos?type=public`;
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`GitHub API error: ${response.status}`);
-            }
-            const repositories = await response.json();
-            const githubProjectsContainer = document.querySelector('#github-projects');
-
-            repositories.forEach((repo) => {
-                const sectionCard = document.createElement('div');
-                sectionCard.className = 'card';
-                sectionCard.style = 'margin-bottom: 2rem; padding: 2rem;';
-
-                const sectionCardTitle = document.createElement('h3');
-                sectionCardTitle.textContent = repo.name;
-                sectionCard.appendChild(sectionCardTitle);
-
-                const repoCardDescription = document.createElement('p');
-                repoCardDescription.textContent = repo.description || 'No description available';
-                sectionCard.appendChild(repoCardDescription);
-
-                const repoCardLink = document.createElement('a');
-                repoCardLink.href = repo.html_url;
-                repoCardLink.className = 'btn btn-primary';
-                repoCardLink.textContent = 'View on GitHub';
-                repoCardLink.target = '_blank';
-                sectionCard.appendChild(repoCardLink);
-
-                githubProjectsContainer.appendChild(sectionCard);
-            });
-        } catch (error) {
-            console.error(`Error fetching repositories: ${error}`);
-        }
-    }
-
-    function toggleCard(event) {
-        const card = event.target.closest('.card');
-        card.classList.toggle('card-open');
-    }
-
-
-    // Call the populateProjects function
-    populateProjects();
-</script>
-
+      // Show the home section by default
+      showSection("home");
+    </script>
+  </body>
 </html>
